@@ -13,7 +13,7 @@ public class RecuperaU1 {
 
    
     public static void main(String[] args) {
-      Scanner leer = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in);
       List<String> lista = new ArrayList<String>();
       int lon, d;
       String a, otro;
@@ -25,15 +25,18 @@ public class RecuperaU1 {
         System.out.println("Ingresa el dato "+(i+1)+": ");
         datos[i] = leer.next();
       }
-      System.out.println("**Datos del arreglo**");
+      System.out.println("Datos del arreglo");
       for(int i = 0; i < lon; i++)
       {
         System.out.print(datos[i]+"   ");
       }
-      
-      lista = Arrays.asList (datos);
+      int ca=datos.length;
+      for (int i = 0; i < ca; i++) {
+        lista.add(datos[i]);
+    }
+     // lista = Arrays.asList (datos);
       System.out.println("");
-      System.out.println("**Ahora los datos estan en una lista**");
+      System.out.println("Ahora los datos estan en una lista");
       System.out.println("Datos de la lista");
       for(int i = 0; i < lon; i++)
       {
@@ -49,13 +52,15 @@ public class RecuperaU1 {
       {
           System.out.println("Ingrese el dato");
           lista.add(leer.next());
-          
+          continuar=true;
       }else{
-          System.out.println("Los nuevos datos de la lista son ");
-          System.out.println(lista);
+        
           continuar=false;
       }
-      }while(continuar==false);
+      }while(continuar);
+        System.out.println("Los nuevos datos de la lista son ");
+          System.out.println(lista);
+    }
     }
     
 }
